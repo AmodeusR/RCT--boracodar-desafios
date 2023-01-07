@@ -1,0 +1,23 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+
+  &__title {
+    margin: 0;
+    margin-top: 4rem;
+    font-size: 3rem;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: .9rem;
+  }
+}
+
+.destaque {
+  text-decoration: underline;
+  color: hsl(278, 80%, 50%);
+}

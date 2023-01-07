@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+body {
+  color: rgb(204, 204, 204);
+  margin: 0;
+  background-color: #161620;
+}
+
+a {
+  font-weight: 500;
+  color: hsl(278, 97%, 60%);
+  text-decoration: none;
+  transition: color 250ms ease;
+
+  &:hover {
+    color: hsl(274, 90%, 70%)
+  }
+
+  &:visited {
+    text-decoration: none;
+    color: hsl(280, 80%, 35%)
+  }
+}
