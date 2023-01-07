@@ -1,0 +1,32 @@
+.not-found {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+  &__title {
+    font-size: 8rem;
+    margin: 0;
+    color: white;
+    line-height: 1;
+  }
+
+  &__description {
+    font-size: 1.2rem;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    letter-spacing: 1px;
+  }
+
+  &__redirect {
+    background-color: var(--color-purple-400);
+    color :white;
+    padding: 1rem 2rem;
+    transition: background-color 250ms ease;
+
+    &:hover {
+      background-color: var(--color-purple-500);
+    }
+  }
+}
