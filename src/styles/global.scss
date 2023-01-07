@@ -1,6 +1,11 @@
+:root {
+  --color-purple-400: hsl(278, 97%, 60%);
+  --color-purple-500: hsl(274, 90%, 70%);
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Noto Sans JP", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -10,6 +15,10 @@ body {
 }
 
 a {
+  text-decoration: none;
+}
+
+.external {
   font-weight: 500;
   color: hsl(278, 97%, 60%);
   text-decoration: none;
