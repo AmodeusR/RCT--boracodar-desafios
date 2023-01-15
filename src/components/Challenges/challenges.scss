@@ -1,0 +1,17 @@
+.challenges {
+
+  &__return {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: white;
+    background-color: var(--color-purple-400);
+    padding: .5rem;
+    border-radius: 50%;
+    transition: background-color 200ms ease;
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-purple-500);
+    }
+  }
+}

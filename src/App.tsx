@@ -1,17 +1,21 @@
-import { useState } from "react";
-import "./styles/home.scss";
-import MainPage from "./components/MainPage/MainPage";
+import { MainPage, NotFoundPage, Challenges } from "./components";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
-import MusicPlayer from "./challenges/MusicPlayer";
+
+import { MusicPlayer } from "./challenges";
+
+import "./styles/home.scss";
 
 const router = createBrowserRouter([{
   path: "/",
   element: <MainPage />,
   errorElement: <NotFoundPage />
 }, {
-  path:"music-player",
-  element: <MusicPlayer />
+  path:"desafios",
+  element: <Challenges />,
+  children: [{
+    path:"music-player",
+    element: <MusicPlayer />
+  }]
 }]);
 
 function App() {

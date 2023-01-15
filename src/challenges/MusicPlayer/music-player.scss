@@ -1,0 +1,123 @@
+.music-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+
+}
+
+.player {
+  --player-background-color: #2A2141;
+  --player-text-color-300: hsl(240, 10%, 80%);
+  --player-text-color-400: hsl(240, 9%, 89%);
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1.5rem;
+  color: var(--player-text-color-400);
+  background-color: var(--player-background-color);
+  border-radius: 9px;
+
+  
+  .music-info {
+    display: flex;
+    flex-direction: column;
+    
+    &__cover {
+      --cover-size: 192px;
+      max-width: var(--cover-size);
+      height: var(--cover-size);
+      border-radius: 6px;
+      margin: 0 auto 2rem;
+    }
+
+    &__name {
+      margin: 0;
+    }
+
+    &__band {
+      color: var(--player-text-color-400);
+      opacity: 67%;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    width: 100%;
+    align-items: center;
+    color: var(--player-text-color-300);
+    
+    > * {
+      transition: color 200ms ease;
+    }
+
+    > *:hover {
+      cursor: pointer;
+      color: white;
+    }
+
+    .disabled {
+      color:hsl(240, 10%, 40%);
+      pointer-events: none;
+    }
+  }
+
+  &__action-button {
+    border: none;
+    background: none;
+    color: currentColor;
+  }
+
+  &__progress {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    width: 100%;
+  }
+
+  &__times {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+  }
+  
+  &__time {
+    font-size: .9rem;
+    color: var(--player-text-color-300);
+    opacity: 70%;
+  }
+}
+
+@media (min-width: 21rem) {
+  .player {
+    padding: 3rem;
+  }
+}
+
+@media (min-width: 30em) {
+  .player {
+    padding: 2rem;
+    min-width: 25rem;
+    align-items: center;
+    gap: 1rem;
+
+    .music-info {
+      flex-direction: row;
+      align-items: center;
+
+      &__cover {
+        --cover-size: 120px;
+        margin-bottom: 0;
+        margin-right: 2rem;
+      }
+    }
+  }
+}
+
+.range {
+  height: 7px;
+  
+}
