@@ -72,13 +72,11 @@ const MusicPlayer = () => {
     
     if (isPlaying) {
       audio.pause();
-      console.log(songIntervalId);
       clearInterval(songIntervalId);
       return;
     } else {
       const sourceSongIntervalId = setInterval(() => {
         setCurrentTime(audio.currentTime);
-        console.log("a");
       }, 1000);
       setSongIntervalId(sourceSongIntervalId);
     }
