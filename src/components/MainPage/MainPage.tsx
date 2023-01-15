@@ -1,4 +1,15 @@
-import React from "react";
+import { MusicPlayerCover } from "../../assets/images";
+import ChallengeCard from "../ChallengeCard/ChallengeCard";
+
+const challenges = [
+  {
+    title: "Music player",
+    description:
+      "Criação um player de música que reproduz e mostra dados da música em tempo real.",
+    image: MusicPlayerCover,
+    dir: "music-player"
+  }
+];
 
 const MainPage = () => {
   return (
@@ -16,6 +27,12 @@ const MainPage = () => {
           Rocketseat
         </a>
       </p>
+
+      <section className="home__challenges">
+        {challenges.map((challenge) => (
+          <ChallengeCard key={challenge.dir} {...challenge}  />
+        ))}
+      </section>
     </main>
   );
 };
